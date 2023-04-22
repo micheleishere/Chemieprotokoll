@@ -97,43 +97,26 @@ st.write('Schlussfolgerungen Output:',txt)
 
 import streamlit as st
 
-# Kolone erstellen, dass Titel links und Emoji rechts
-col1, col2, col3 = st.columns([1,2,1])
-col1.markdown(' # :blue[_Rechner_]')
-col3.header(':test_tube:')
+st.title("Taschenrechner")
 
-# Trennungslinie hinzufügen
-st.write("---")
- 
-# input 1
-num1 = st.number_input(label="Erste Zahl")
- 
-# input 2
-num2 = st.number_input(label="Zweite Zahl")
- 
-# Operation wählen
-operation = st.radio("Wähle eine Operation:",
-                    ("+", "-", "*", "/"))
- 
-ans = 0
- 
-# Funktion definieren für Rechner
-def calculate():
-    if operation == "+":
-        ans = num1 + num2
-    elif operation == "-":
-        ans = num1 - num2
-    elif operation == "*":
-        ans = num1 * num2
-    elif operation=="/" and num2!=0:
-        ans = num1 / num2
-    else:
-        st.warning("Division durch 0: Fehler. Bitte eine Zahl wählen, die nicht 0 ist.")
-        ans = "Nicht definiert"
- 
-    st.success(f"Antwort = {ans}")
- 
-if st.button("Rechnen"):
-    calculate()
+num1 = st.number_input("Geben Sie die erste Zahl ein:")
+num2 = st.number_input("Geben Sie die zweite Zahl ein:")
 
+operation = st.selectbox("Wählen Sie eine Operation:", ["Addition", "Subtraktion", "Multiplikation", "Division"])
 
+if st.button("Berechnen"):
+    if operation == "Addition":
+        result = num1 + num2
+        st.write("Das Ergebnis von", num1, "+", num2, "ist", result)
+    elif operation == "Subtraktion":
+        result = num1 - num2
+        st.write("Das Ergebnis von", num1, "-", num2, "ist", result)
+    elif operation == "Multiplikation":
+        result = num1 * num2
+        st.write("Das Ergebnis von", num1, "*", num2, "ist", result)
+    elif operation == "Division":
+        if num2 == 0:
+            st.write("Fehler: Division durch Null")
+        else:
+            result = num1 / num2
+            st.write("Das Ergebnis von", num1, "/", num2, "ist", result)
