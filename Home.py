@@ -14,6 +14,19 @@ import streamlit as st
 # Seitenleiste-Kommentar erstellen
 st.sidebar.success("Wähle einen Tab.")
 
+import streamlit as st
+
+# Erstelle die Seitenleiste
+options = ["Registerkarte 1", "Registerkarte 2", "Registerkarte 3"]
+selection = st.sidebar.radio("Gehe zu", options)
+
+# Zeige den Inhalt der ausgewählten Registerkarte an
+if selection == "Registerkarte 1":
+    st.write("Dies ist der Inhalt von Registerkarte 1")
+elif selection == "Registerkarte 2":
+    st.write("Dies ist der Inhalt von Registerkarte 2")
+else:
+    st.write("Dies ist der Inhalt von Registerkarte 3")
 
 # Kolone erstellen, um den Titel links zu setzen und nicht in der Mitte
 col1, col2, col3 = st.columns([1,2,1])
