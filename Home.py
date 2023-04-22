@@ -59,7 +59,7 @@ import datetime
 
 # Kolone erstellen, dass Titel links und Emoji rechts
 col1, col2, col3 = st.columns([1,2,1])
-st.markdown(' # :green[_Versuch 1_]')
+st.markdown(' # :green[_Dokumentation des Experiments_]')
 col3.header(':test_tube:')
 
 # Trennungslinie hinzufügen
@@ -94,42 +94,46 @@ st.write('Ablauf Output:',txt)
 txt = st.text_area('Schlussfolgerungen: ')
 st.write('Schlussfolgerungen Output:',txt)
 
+
 import streamlit as st
-import datetime 
 
 # Kolone erstellen, dass Titel links und Emoji rechts
 col1, col2, col3 = st.columns([1,2,1])
-st.markdown(' # :blue[_Experiment 1_]')
+col1.markdown(' # :blue[_Rechner_]')
 col3.header(':test_tube:')
 
 # Trennungslinie hinzufügen
 st.write("---")
+ 
+# input 1
+num1 = st.number_input(label="Erste Zahl")
+ 
+# input 2
+num2 = st.number_input(label="Zweite Zahl")
+ 
+# Operation wählen
+operation = st.radio("Wähle eine Operation:",
+                    ("+", "-", "*", "/"))
+ 
+ans = 0
+ 
+# Funktion definieren für Rechner
+def calculate():
+    if operation == "+":
+        ans = num1 + num2
+    elif operation == "-":
+        ans = num1 - num2
+    elif operation == "*":
+        ans = num1 * num2
+    elif operation=="/" and num2!=0:
+        ans = num1 / num2
+    else:
+        st.warning("Division durch 0: Fehler. Bitte eine Zahl wählen, die nicht 0 ist.")
+        ans = "Nicht definiert"
+ 
+    st.success(f"Antwort = {ans}")
+ 
+if st.button("Rechnen"):
+    calculate()
 
-# Eingabe Titel 
-title = st.text_input('Titel Experiment', ' ')
 
-# Kalender hinzufügen
-d = st.date_input(
-    "Datum des Experiments",
-    datetime.date(2023, 3, 31))
-
-# Input Eingabe
-title = st.text_input('Durchgeführt von', ' ')
-
-title = st.text_input('Studiengang', ' ')
-
-# Multiselektion 
-options = st.multiselect(
-    'Verwendetes Material',
-    ['Erlenmeyerkolben', 'Messzylinder', 'Trichter', 'Polylöffel', 'Becherglas', 'Magnetstab mit Fischli', 'Messkolben', 'Bürette', 'Thermometer', 'Glasstab','Anderes'],
-    ['Erlenmeyerkolben', 'Messzylinder'])
-
-# Input Text 
-txt = st.text_area('Verwendete Chemikalien: ')
-st.write('Output:',txt)
-
-txt = st.text_area('Ablauf des Experiments: ')
-st.write('Ablauf Output:',txt)
-
-txt = st.text_area('Schlussfolgerungen: ')
-st.write('Schlussfolgerungen Output:',txt)
