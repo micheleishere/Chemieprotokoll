@@ -12,8 +12,23 @@ import streamlit as st
 
 st.sidebar.header('Optionen')
 
-optionen = ['Details', 'Experiment 1', 'Experiment 2', "Experiment 3", "Notizen", "Periodensystem", "Rechner"]
-auswahl = st.sidebar.selectbox('Wählen Sie eine Option aus', optionen)
+import streamlit as st
+
+# Sidebar-Tabs erstellen
+tabs = st.sidebar.multiselect(
+    'Wählen Sie eine Registerkarte',
+    ['Details', 'Experiment 1', 'Experiment 2']
+)
+
+# Inhalte für jede Registerkarte definieren
+if 'Tab 1' in tabs:
+    st.sidebar.write('Details')
+
+if 'Tab 2' in tabs:
+    st.sidebar.write('Experiment 1')
+
+if 'Tab 3' in tabs:
+    st.sidebar.write('Experiment 2')
 
 st.write('Sie haben die Option ausgewählt:', auswahl)
 
