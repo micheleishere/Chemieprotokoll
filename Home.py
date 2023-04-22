@@ -31,10 +31,7 @@ selected_option = st.selectbox('Wählen Sie eine Option aus:', options)
 
 st.write('Sie haben die Option ausgewählt:', selected_option)
 
-import tkinter as tk
+import streamlit as st
 
-root = tk.Tk()
-text_widget = tk.Text(root)
-text_widget.pack()
-
-root.mainloop()
+notiz = st.text_area('Geben Sie Ihre Notiz ein:', '', height=100, max_chars=500)
+st.write('Ihre Notiz:', notiz)
