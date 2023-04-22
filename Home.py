@@ -17,7 +17,7 @@ import streamlit as st
 # Sidebar-Tabs erstellen
 tabs = st.sidebar.multiselect(
     'Wählen Sie eine Registerkarte',
-    ['Details', 'Experiment 1', 'Experiment 2']
+    ['Tab 1', 'Tab 2', 'Tab 3']
 )
 
 # Inhalte für jede Registerkarte definieren
