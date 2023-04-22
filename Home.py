@@ -8,7 +8,14 @@ st.set_page_config(
 )
 
 # Seitenleiste-Kommentar erstellen
-st.sidebar.success("Wähle einen Tab.")
+import streamlit as st
+
+st.sidebar.header('Optionen')
+
+optionen = ['Details', 'Experiment 1', 'Experiment 2', "Experiment 3", "Notizen", "Periodensystem", "Rechner"]
+auswahl = st.sidebar.selectbox('Wählen Sie eine Option aus', optionen)
+
+st.write('Sie haben die Option ausgewählt:', auswahl)
 
 # Kolone erstellen, um den Titel links zu setzen und nicht in der Mitte
 col1, col2, col3 = st.columns([1,2,1])
