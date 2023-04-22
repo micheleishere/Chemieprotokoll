@@ -18,7 +18,7 @@ col1.markdown(' # :green[_Deine lieblings App für Chemieprotokolle!_] :test_tub
 st.subheader('Das Chemieprotokoll unterstützt dich während deinen Labortpraktika bzw. Experimenten während deines Studiums. Hier kannst du deine Experimente dokumentieren, Notizen erstellen oder Berechnungen durchführen.')
 
 #Bild in der 3. Kolone setzen
-col3.image('pexels-polina-tankilevitch-3735780.jpg')
+col3.image('https://synaigy-wbg-media-s3.s3.eu-central-1.amazonaws.com/media/image/6f/8f/42/Chemie-Kachel5cd3c9c0aaeff.jpg')
 
 # Caption erstellen 
 st.caption("Erstellt von der BMLD Studentin: Michèle Pfister")
