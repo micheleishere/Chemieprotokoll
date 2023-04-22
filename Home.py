@@ -10,27 +10,10 @@ st.set_page_config(
 # Seitenleiste-Kommentar erstellen
 import streamlit as st
 
-st.sidebar.header('Optionen')
 
-import streamlit as st
+# Seitenleiste-Kommentar erstellen
+st.sidebar.success("Wähle einen Tab.")
 
-# Sidebar-Tabs erstellen
-tabs = st.sidebar.multiselect(
-    'Wählen Sie eine Registerkarte',
-    ['Tab 1', 'Tab 2', 'Tab 3']
-)
-
-# Inhalte für jede Registerkarte definieren
-if 'Tab 1' in tabs:
-    st.sidebar.write('Details')
-
-if 'Tab 2' in tabs:
-    st.sidebar.write('Experiment 1')
-
-if 'Tab 3' in tabs:
-    st.sidebar.write('Experiment 2')
-
-st.write('Sie haben die Option ausgewählt:', auswahl)
 
 # Kolone erstellen, um den Titel links zu setzen und nicht in der Mitte
 col1, col2, col3 = st.columns([1,2,1])
