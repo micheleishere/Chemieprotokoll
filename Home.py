@@ -30,3 +30,11 @@ options = ['Details', 'Experiment 1', 'Experiment 2', "Experiment 3", "Notizen",
 selected_option = st.selectbox('Wählen Sie eine Option aus:', options)
 
 st.write('Sie haben die Option ausgewählt:', selected_option)
+
+import tkinter as tk
+
+root = tk.Tk()
+text_widget = tk.Text(root)
+text_widget.pack()
+
+root.mainloop()
