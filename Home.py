@@ -15,22 +15,6 @@ import streamlit as st
 st.sidebar.success("Tab 1")
 
 
-# Seitenleiste-Kommentar erstellen
-st.sidebar.success("Tab 2")
-
-import streamlit as st
-
-def sidebar_function():
-    st.sidebar.header("Sidebar Funktion")
-    value = st.sidebar.slider("Wähle einen Wert", 0, 100, 50)
-    st.sidebar.write(f"Du hast {value} ausgewählt.")
-
-def main():
-    st.title("Meine Streamlit-App")
-    sidebar_function()
-
-if __name__ == "__main__":
-    main()
 
 # Kolone erstellen, um den Titel links zu setzen und nicht in der Mitte
 col1, col2, col3 = st.columns([1,2,1])
