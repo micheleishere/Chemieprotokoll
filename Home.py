@@ -12,7 +12,7 @@ import streamlit as st
 
 
 # Seitenleiste-Kommentar erstellen
-st.sidebar.success("Kamera.")
+st.sidebar.success("https://de.wikibooks.org/wiki/Formelsammlung_Chemie/_St%C3%B6chiometrie")
 
 
 # Seitenleiste-Kommentar erstellen
