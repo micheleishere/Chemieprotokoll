@@ -20,7 +20,7 @@ import requests
 import json
 
 # Set the endpoint URL for the WordPress API
-url = "https://example.com/wp-json/wp/v2"
+url = "https://de.wikibooks.org/wiki/Formelsammlung_Chemie/_St%C3%B6chiometrie"
 
 # Set the authentication headers for the API
 headers = {
@@ -30,7 +30,7 @@ headers = {
 
 # Define the payload for the widget
 widget_payload = {
-    "title": "Mein Widget-Titel",
+    "title": "Chemie Formeln",
     "text": "Mein Widget-Text"
 }
 
