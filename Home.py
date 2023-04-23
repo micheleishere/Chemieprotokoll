@@ -12,41 +12,10 @@ import streamlit as st
 
 
 # Seitenleiste-Kommentar erstellen
-st.sidebar.success("Wähle einen Tab.")
+st.sidebar.success("Hello.")
 
-import streamlit as st
-
-import requests
-import json
-
-# Set the endpoint URL for the WordPress API
-url = "https://de.wikibooks.org/wiki/Formelsammlung_Chemie/_St%C3%B6chiometrie"
-
-# Set the authentication headers for the API
-headers = {
-    "Content-Type": "application/json",
-    "Authorization": "Basic YWRtaW46cGFzc3dvcmQ="
-}
-
-# Define the payload for the widget
-widget_payload = {
-    "title": "Chemie Formeln",
-    "text": "Mein Widget-Text"
-}
-
-# Define the payload for the sidebar
-sidebar_payload = {
-    "sidebar-1": [widget_payload]
-}
-
-# Send the API request to update the sidebar
-response = requests.post(url + "/sidebars", headers=headers, data=json.dumps(sidebar_payload))
-
-# Check if the request was successful
-if response.status_code == 200:
-    print("Das Widget wurde erfolgreich zur Sidebar hinzugefügt.")
-else:
-    print("Es gab einen Fehler beim Hinzufügen des Widgets zur Sidebar.")
+# Seitenleiste-Kommentar erstellen
+st.sidebar.success("Bitch")
 
 # Kolone erstellen, um den Titel links zu setzen und nicht in der Mitte
 col1, col2, col3 = st.columns([1,2,1])
