@@ -18,6 +18,33 @@ st.sidebar.success("Tab 1")
 # Seitenleiste-Kommentar erstellen
 st.sidebar.success("Tab 2")
 
+import streamlit as st
+
+def home():
+    st.write("This is the home page.")
+
+def about():
+    st.write("This is the about page.")
+
+def contact():
+    st.write("This is the contact page.")
+
+def main():
+    pages = {
+        "Home": home,
+        "About": about,
+        "Contact": contact
+    }
+
+    st.sidebar.title("Navigation")
+    selection = st.sidebar.radio("Go to", list(pages.keys()))
+
+    page = pages[selection]
+    page()
+
+if __name__ == "__main__":
+    main()
+
 # Kolone erstellen, um den Titel links zu setzen und nicht in der Mitte
 col1, col2, col3 = st.columns([1,2,1])
 col1.markdown(' # :green[_Deine lieblings App für Chemieprotokolle!_] :test_tube:')
