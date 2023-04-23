@@ -20,30 +20,17 @@ st.sidebar.success("Tab 2")
 
 import streamlit as st
 
-def home():
-    st.write("This is the home page.")
-
-def about():
-    st.write("This is the about page.")
-
-def contact():
-    st.write("This is the contact page.")
+def sidebar_function():
+    st.sidebar.header("Sidebar Funktion")
+    value = st.sidebar.slider("Wähle einen Wert", 0, 100, 50)
+    st.sidebar.write(f"Du hast {value} ausgewählt.")
 
 def main():
-    pages = {
-        "Home": home,
-        "About": about,
-        "Contact": contact
-    }
+    st.title("Meine Streamlit-App")
+    sidebar_function()
 
-    st.sidebar.title("Navigation")
-    selection = st.sidebar.radio("Go to", list(pages.keys()))
-
-    page = pages[selection]
-    page()
-
-if __name__ == "__Taschenrechner__":
-   Taschenrechner()
+if __name__ == "__main__":
+    main()
 
 # Kolone erstellen, um den Titel links zu setzen und nicht in der Mitte
 col1, col2, col3 = st.columns([1,2,1])
