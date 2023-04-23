@@ -12,7 +12,7 @@ import streamlit as st
 
 
 # Seitenleiste-Kommentar erstellen
-st.sidebar.success("https://de.wikibooks.org/wiki/Formelsammlung_Chemie/_St%C3%B6chiometrie")
+st.sidebar.success("Tab 1")
 
 
 # Seitenleiste-Kommentar erstellen
@@ -115,6 +115,7 @@ import streamlit as st
 
 notiz = st.text_area('Schreiben Sie hier Ihre Berechnungen auf:', '', height=200, max_chars=1000)
 
+st.write("https://de.wikibooks.org/wiki/Formelsammlung_Chemie/_St%C3%B6chiometrie")
 
 import streamlit as st
 
