@@ -12,10 +12,17 @@ import streamlit as st
 
 
 # Seitenleiste-Kommentar erstellen
-st.sidebar.success("Hello.")
+st.sidebar.success("Kamera.")
+
+import streamlit as st
+
+picture = st.camera_input("Take a picture")
+
+if picture:
+    st.image(picture)
 
 # Seitenleiste-Kommentar erstellen
-st.sidebar.success("Bitch")
+st.sidebar.success("Hi")
 
 # Kolone erstellen, um den Titel links zu setzen und nicht in der Mitte
 col1, col2, col3 = st.columns([1,2,1])
