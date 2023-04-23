@@ -51,7 +51,7 @@ st.write('Sie haben die Option ausgewählt:', selected_option)
 
 import streamlit as st
 
-notiz = st.text_area('Geben Sie hier Ihre kurzgefassten Notizen ein:', '', height=100, max_chars=1000)
+notiz = st.text_area('Tippen Sie hier Ihre Notizen zur Theoriebesprechung ein:', '', height=500, max_chars=1000)
 
 
 import streamlit as st
