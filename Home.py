@@ -121,6 +121,6 @@ if st.button("Berechnen"):
             result = num1 / num2
             st.write("Das Ergebnis von", num1, "/", num2, "ist", result)
             
-   import streamlit as st
+import streamlit as st
 
 notiz = st.text_area('Schreiben Sie hier Ihre Berechnungen auf:', '', height=200, max_chars=1000)
