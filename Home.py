@@ -51,7 +51,7 @@ st.write('Sie haben die Option ausgewählt:', selected_option)
 
 import streamlit as st
 
-notiz = st.text_area('Tippen Sie hier Ihre Notizen zur Theoriebesprechung ein:', '', height=500, max_chars=1000)
+notiz = st.text_area('Tippen Sie hier Ihre Notizen zur Theoriebesprechung ein:', '', height=200, max_chars=1000)
 
 
 import streamlit as st
@@ -120,3 +120,7 @@ if st.button("Berechnen"):
         else:
             result = num1 / num2
             st.write("Das Ergebnis von", num1, "/", num2, "ist", result)
+            
+   import streamlit as st
+
+notiz = st.text_area('Schreiben Sie hier Ihre Berechnungen auf:', '', height=200, max_chars=1000)
