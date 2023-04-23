@@ -119,7 +119,7 @@ st.write("https://de.wikibooks.org/wiki/Formelsammlung_Chemie/_St%C3%B6chiometri
 
 import streamlit as st
 
-picture = st.camera_input("Take a picture")
+picture = st.camera_input("Mach ein Foto von deinem Experiment")
 
 if picture:
     st.image(picture)
