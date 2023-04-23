@@ -82,7 +82,7 @@ txt = st.text_area('Ablauf des Experiments: ')
 st.write('Ablauf Output:',txt)
 
 txt = st.text_area('Schlussfolgerungen: ')
-
+st.write('Schlussfolgerungen Output:',txt)
 
 
 import streamlit as st
