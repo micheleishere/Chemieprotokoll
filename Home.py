@@ -10,6 +10,27 @@ st.set_page_config(
 # Seitenleiste-Kommentar erstellen
 import streamlit as st
 
+import streamlit as st
+
+def page1():
+    st.title("Page 1")
+    # Inhalte der ersten Seite hier hinzufügen
+
+def page2():
+    st.title("Page 2")
+    # Inhalte der zweiten Seite hier hinzufügen
+    
+from sessionstate import get_state
+
+def main():
+    state = get_state()
+    pages = {
+        "Page 1": page1,
+        "Page 2": page2
+    }
+    st.sidebar.title("Navigation")
+    page = st.sidebar.radio("Go to", tuple(pages.keys()))
+    pages[page]()
 
 # Seitenleiste-Kommentar erstellen
 st.sidebar.success("https://de.wikibooks.org/wiki/Formelsammlung_Chemie/_St%C3%B6chiometrie")
