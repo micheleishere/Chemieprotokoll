@@ -16,7 +16,7 @@ st.sidebar.success("https://de.wikibooks.org/wiki/Formelsammlung_Chemie/_St%C3%B
 
 
 # Seitenleiste-Kommentar erstellen
-st.sidebar.success("Madelaine ist eine Bitch")
+st.sidebar.success("Tab 2")
 
 # Kolone erstellen, um den Titel links zu setzen und nicht in der Mitte
 col1, col2, col3 = st.columns([1,2,1])
