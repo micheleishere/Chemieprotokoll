@@ -16,17 +16,37 @@ st.sidebar.success("Wähle einen Tab.")
 
 import streamlit as st
 
-# Erstelle die Seitenleiste
-options = ["Registerkarte 1", "Registerkarte 2", "Registerkarte 3"]
-selection = st.sidebar.radio("Gehe zu", options)
+import requests
+import json
 
-# Zeige den Inhalt der ausgewählten Registerkarte an
-if selection == "Registerkarte 1":
-    st.write("Dies ist der Inhalt von Registerkarte 1")
-elif selection == "Registerkarte 2":
-    st.write("Dies ist der Inhalt von Registerkarte 2")
+# Set the endpoint URL for the WordPress API
+url = "https://example.com/wp-json/wp/v2"
+
+# Set the authentication headers for the API
+headers = {
+    "Content-Type": "application/json",
+    "Authorization": "Basic YWRtaW46cGFzc3dvcmQ="
+}
+
+# Define the payload for the widget
+widget_payload = {
+    "title": "Mein Widget-Titel",
+    "text": "Mein Widget-Text"
+}
+
+# Define the payload for the sidebar
+sidebar_payload = {
+    "sidebar-1": [widget_payload]
+}
+
+# Send the API request to update the sidebar
+response = requests.post(url + "/sidebars", headers=headers, data=json.dumps(sidebar_payload))
+
+# Check if the request was successful
+if response.status_code == 200:
+    print("Das Widget wurde erfolgreich zur Sidebar hinzugefügt.")
 else:
-    st.write("Dies ist der Inhalt von Registerkarte 3")
+    print("Es gab einen Fehler beim Hinzufügen des Widgets zur Sidebar.")
 
 # Kolone erstellen, um den Titel links zu setzen und nicht in der Mitte
 col1, col2, col3 = st.columns([1,2,1])
