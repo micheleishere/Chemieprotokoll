@@ -14,12 +14,6 @@ import streamlit as st
 # Seitenleiste-Kommentar erstellen
 st.sidebar.success("Kamera.")
 
-import streamlit as st
-
-picture = st.camera_input("Take a picture")
-
-if picture:
-    st.image(picture)
 
 # Seitenleiste-Kommentar erstellen
 st.sidebar.success("Hi")
@@ -120,3 +114,11 @@ if st.button("Berechnen"):
 import streamlit as st
 
 notiz = st.text_area('Schreiben Sie hier Ihre Berechnungen auf:', '', height=200, max_chars=1000)
+
+
+import streamlit as st
+
+picture = st.camera_input("Take a picture")
+
+if picture:
+    st.image(picture)
