@@ -14,13 +14,6 @@ import streamlit as st
 # Seitenleiste-Kommentar erstellen
 st.sidebar.success("Tab 1")
 
-import streamlit as st
-
-uploaded_files = st.file_uploader("Choose a CSV file", accept_multiple_files=True)
-for uploaded_file in uploaded_files:
-    bytes_data = uploaded_file.read()
-    st.write("filename:", uploaded_file.name)
-    st.write(bytes_data)
 
 # Kolone erstellen, um den Titel links zu setzen und nicht in der Mitte
 col1, col2, col3 = st.columns([1,2,1])
