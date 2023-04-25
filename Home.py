@@ -14,6 +14,16 @@ import streamlit as st
 # Seitenleiste-Kommentar erstellen
 st.sidebar.success("Tab 1")
 
+import streamlit as st
+
+with st.sidebar:
+    with st.echo():
+        st.write("This code will be printed to the sidebar.")
+
+    with st.spinner("Loading..."):
+        time.sleep(5)
+    st.success("Done!")
+
 # Kolone erstellen, um den Titel links zu setzen und nicht in der Mitte
 col1, col2, col3 = st.columns([1,2,1])
 col1.markdown(' # :green[_Deine lieblings App für Chemieprotokolle!_] :test_tube:')
