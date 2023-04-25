@@ -13,6 +13,8 @@ import streamlit as st
 
 # Seitenleiste-Kommentar erstellen
 st.sidebar.success("Tab 1")
+
+streamlit run [entrypoint file]
                
 
 # Kolone erstellen, um den Titel links zu setzen und nicht in der Mitte
