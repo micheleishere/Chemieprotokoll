@@ -12,22 +12,9 @@ import streamlit as st
 
 
 # Seitenleiste-Kommentar erstellen
-st.sidebar.success("Tab 1")
-
-import streamlit as st
-import pandas as pd
-
-df = pd.DataFrame(
-    [
-       {"command": "st.selectbox", "rating": 4, "is_widget": True},
-       {"command": "st.balloons", "rating": 5, "is_widget": False},
-       {"command": "st.time_input", "rating": 3, "is_widget": True},
-   ]
-)
-edited_df = st.experimental_data_editor(df)
-
-favorite_command = edited_df.loc[edited_df["rating"].idxmax()]["command"]
-st.markdown(f"Your favorite command is **{favorite_command}** 🎈")
+# Object notation
+st.sidebar.[element_name]# Object notation
+st.sidebar.[element_name]
 
 # Kolone erstellen, um den Titel links zu setzen und nicht in der Mitte
 col1, col2, col3 = st.columns([1,2,1])
