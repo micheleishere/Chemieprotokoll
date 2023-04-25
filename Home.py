@@ -11,9 +11,9 @@ st.set_page_config(
 import streamlit as st
 
 
-# Seitenleiste-Kommentar erstellen
-st.sidebar.success("Tab 1")
-
+#sidebar
+st.sidebar.header(This ist your Page")
+                 
 
 # Kolone erstellen, um den Titel links zu setzen und nicht in der Mitte
 col1, col2, col3 = st.columns([1,2,1])
